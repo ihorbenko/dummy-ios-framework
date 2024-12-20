@@ -4,11 +4,11 @@ import PackageDescription
 let package = Package(
     name: "ottu_checkout_sdk",
     platforms: [
-        .iOS(.v13)  
+        .iOS(.v13)
     ],
     products: [
         .library(
-            name: "ottu_checkout_sdk",  
+            name: "ottu_checkout_sdk",
             targets: ["ottu_checkout_sdk"]
         ),
     ],
@@ -17,20 +17,18 @@ let package = Package(
         .package(url: "https://github.com/SVGKit/SVGKit", from: "3.0.0")
     ],
     targets: [
-
         .binaryTarget(
-            name: "ottu_checkout_sdk",  
-            path: "Sources/ottu_checkout_sdk.xcframework" 
+            name: "ottu_checkout_sdk_bin",
+            path: "Sources/ottu_checkout_sdk.xcframework"
         ),
-
         .target(
-            name: "ottu_checkout_sdk_wrapper",  
+            name: "ottu_checkout_sdk",
             dependencies: [
-                "SVGKit",  
+                "SVGKit",
                 .product(name: "Sentry", package: "sentry-cocoa"),
-                "ottu_checkout_sdk"
+                "ottu_checkout_sdk_bin"
             ],
-            path: "Sources/ottu_checkout_sdk_wrapper" 
+            path: "Sources/ottu_checkout_sdk_wrapper"
         ),
     ]
 )
