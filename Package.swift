@@ -13,6 +13,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+	.package(url: "https://github.com/ihorbenko/dummy-ios-framework", from: "1.0.19"),
         .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0"),
         .package(url: "https://github.com/SVGKit/SVGKit", from: "3.0.0")
     ],
