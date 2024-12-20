@@ -19,19 +19,16 @@ let package = Package(
         .package(url: "https://github.com/SVGKit/SVGKit", from: "3.0.0")
     ],
     targets: [
-        // Ваш бінарний таргет
-        .binaryTarget(
-            name: "ottu_checkout_sdk",  // Ім'я фреймворка для імпорту
-            path: "Sources/ottu_checkout_sdk.xcframework"  // Шлях до xcframework
-        ),
-        
-        // Таргет для основного фреймворка, де будуть підключатися залежності
+        // Таргет для основного фреймворка з усіма залежностями
         .target(
-            name: "ottu_checkout_sdk",
+            name: "ottu_checkout_sdk",  // Це ім'я фреймворка для імпорту
             dependencies: [
                 "SVGKit",  // Залежність SVGKit
                 .product(name: "Sentry", package: "sentry-cocoa"),  // Залежність Sentry
-                "ottu_checkout_sdk"  // Ваш бінарний фреймворк
+                .binaryTarget(
+                    name: "ottu_checkout_sdk_binary",  // Бінарний таргет
+                    path: "Sources/ottu_checkout_sdk.xcframework"  // Шлях до xcframework
+                )  // Ваш бінарний фреймворк
             ]
         ),
     ]
