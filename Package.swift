@@ -17,18 +17,20 @@ let package = Package(
         .package(url: "https://github.com/SVGKit/SVGKit", from: "3.0.0")
     ],
     targets: [
+
         .binaryTarget(
-            name: "ottu_checkout_sdk_bin",  
+            name: "ottu_checkout_sdk",  
             path: "Sources/ottu_checkout_sdk.xcframework" 
         ),
+
         .target(
-            name: "ottu_checkout_sdk",
+            name: "ottu_checkout_sdk_wrapper",  
             dependencies: [
                 "SVGKit",  
-                .product(name: "Sentry", package: "sentry-cocoa"),  
-                .product(name: "ottu_checkout_sdk", package: "ottu_checkout_sdk_bin"),  
+                .product(name: "Sentry", package: "sentry-cocoa"),
+                "ottu_checkout_sdk"
             ],
-	 path: "Sources"
+            path: "Sources/ottu_checkout_sdk_wrapper" 
         ),
     ]
 )
