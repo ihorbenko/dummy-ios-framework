@@ -24,8 +24,7 @@ let package = Package(
                 "SVGKit",
                 .product(name: "Sentry", package: "sentry-cocoa"),
                 "ottu_checkout_sdk"
-            ],
-            path: "Sources/Wrapper" // Створіть цю папку
+            ]
         ),
         .binaryTarget(
             name: "ottu_checkout_sdk",
