@@ -30,7 +30,7 @@ let package = Package(
             ],
             path: "./Sources",
             linkerSettings: [
-                .linkedFramework("ottu_checkout_sdk_binary", .when(platforms: [.iOS]))
+                .linkedFramework("ottu_checkout_sdk", .when(platforms: [.iOS]))
             ]
         )
     ]
