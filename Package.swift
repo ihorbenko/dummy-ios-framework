@@ -18,19 +18,22 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ottu_checkout_sdk",
+            name: "ottu_checkout_sdk_binary",
             path: "./Sources/ottu_checkout_sdk.xcframework"
         ),
         .target(
-            name: "ottu_checkout_sdk_wrapper",
+            name: "ottu_checkout_sdk",
             dependencies: [
-                "ottu_checkout_sdk",
+                "ottu_checkout_sdk_binary",
                 .product(name: "Sentry", package: "sentry-cocoa"),
                 "SVGKit"
             ],
             path: "./Sources",
-            exclude: ["ottu_checkout_sdk.xcframework"], // Якщо в папці "Sources" є ще щось
-            publicHeadersPath: "./" // Вказуємо публічні заголовки (якщо потрібні)
+            exclude: ["ottu_checkout_sdk.xcframework"], 
+            linkerSettings: [
+                .linkedFramework("Sentry"),
+                .linkedFramework("SVGKit")
+            ]
         )
     ]
 )
