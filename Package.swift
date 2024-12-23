@@ -10,16 +10,16 @@ let package = Package(
         .library(
             name: "ottu_checkout_sdk",
             targets: ["ottu_checkout_sdk"]
-        ),
+        )
     ],
     dependencies: [
         .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0"),
-        .package(url: "https://github.com/SVGKit/SVGKit", from: "3.0.0"),
+        .package(url: "https://github.com/SVGKit/SVGKit", from: "3.0.0")
     ],
     targets: [
         .binaryTarget(
             name: "ottu_checkout_sdk",
-            path: "./BinaryFrameworks/ottu_checkout_sdk.xcframework"
+            path: "./Sources/ottu_checkout_sdk.xcframework"
         ),
         .target(
             name: "ottu_checkout_sdk_wrapper",
@@ -28,7 +28,9 @@ let package = Package(
                 .product(name: "Sentry", package: "sentry-cocoa"),
                 "SVGKit"
             ],
-            path: "./Sources"
+            path: "./Sources",
+            exclude: ["ottu_checkout_sdk.xcframework"], // Якщо в папці "Sources" є ще щось
+            publicHeadersPath: "./" // Вказуємо публічні заголовки (якщо потрібні)
         )
     ]
 )
