@@ -14,7 +14,7 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/getsentry/sentry-cocoa", .upToNextMajor(from: "8.33.0")),
-        .package(url: "https://github.com/SVGKit/SVGKit", .upToNextMajor(from: "3.0.0"))
+        .package(url: "https://github.com/SVGKit/SVGKit", .branch("3.x"))
     ],
     targets: [
         .binaryTarget(
