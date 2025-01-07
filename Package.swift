@@ -23,6 +23,9 @@ let package = Package(
                 "ottu_checkout_sdk"
             ],
             path: "./Sources",
+            swiftSettings: [
+                .define("SVGKIT_ENABLED") 
+            ],
             linkerSettings: [
                 .linkedFramework("SVGKit")
             ]
