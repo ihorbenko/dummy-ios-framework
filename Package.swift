@@ -14,7 +14,8 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ottu_checkout_sdk"
+            name: "ottu_checkout_sdk",
+            path: "./Sources/ottu_checkout_sdk.xcframework"
         )
     ]
 )
