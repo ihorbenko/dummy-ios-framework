@@ -1,10 +1,10 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.4
 import PackageDescription
 
 let package = Package(
     name: "ottu_checkout_sdk",
     platforms: [
-        .iOS(.v13)
+        .iOS(.v15)
     ],
     products: [
         .library(
