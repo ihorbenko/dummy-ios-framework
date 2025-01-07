@@ -20,9 +20,12 @@ let package = Package(
             name: "ottu_checkout_sdk_wrapper",
             dependencies: [
                 "SVGKit",
-                .target(name: "ottu_checkout_sdk")
+                "ottu_checkout_sdk"
             ],
-            path: "./Sources"
+            path: "./Sources",
+            linkerSettings: [
+                .linkedFramework("SVGKit")
+            ]
         ),
         .binaryTarget(
             name: "ottu_checkout_sdk",
