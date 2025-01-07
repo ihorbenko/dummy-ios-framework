@@ -17,7 +17,7 @@ let package = Package(
         .package(url: "https://github.com/SVGKit/SVGKit", branch: "3.x")
     ],
     targets: [
-        .binaryTarget(
+        .target(
             name: "ottu_checkout_sdk",
             dependencies: [
                          "SVGKit",
