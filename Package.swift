@@ -19,7 +19,8 @@ let package = Package(
         .target(
             name: "ottu_checkout_sdk_wrapper",
             dependencies: [
-                "SVGKit"
+                "SVGKit",
+                .target(name: "ottu_checkout_sdk")
             ],
             path: "./Sources"
         ),
