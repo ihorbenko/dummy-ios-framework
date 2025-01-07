@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "ottu_checkout_sdk",
-            targets: ["ottu_checkout_sdk", "ottu_checkout_sdk_binary"]
+            targets: ["ottu_checkout_sdk"]
         )
     ],
     dependencies: [
