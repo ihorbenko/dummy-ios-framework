@@ -1,4 +1,4 @@
-// swift-tools-version:5.7
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
@@ -9,13 +9,23 @@ let package = Package(
     products: [
         .library(
             name: "ottu_checkout_sdk",
-            targets: ["ottu_checkout_sdk"]
+            targets: ["ottu_checkout_sdk_wrapper"]
         ),
     ],
+    dependencies: [
+        .package(url: "https://github.com/SVGKit/SVGKit.git", from: "3.0.0"),
+    ],
     targets: [
+        .target(
+            name: "ottu_checkout_sdk_wrapper",
+            dependencies: [
+                "SVGKit"
+            ],
+            path: "./Sources"
+        ),
         .binaryTarget(
             name: "ottu_checkout_sdk",
-            path: "./Sources/ottu_checkout_sdk.xcframework"
+            path: "./ottu_checkout_sdk.xcframework"
         )
     ]
 )
