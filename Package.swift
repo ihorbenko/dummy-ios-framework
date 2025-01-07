@@ -17,13 +17,18 @@ let package = Package(
         .package(url: "https://github.com/SVGKit/SVGKit", branch: "3.x")
     ],
     targets: [
-        .target(
+        .binaryTarget(
             name: "ottu_checkout_sdk",
             dependencies: [
                          "SVGKit",
                          .product(name: "Sentry", package: "sentry-cocoa")
                      ],
-            path: "./Sources/ottu_checkout_sdk.xcframework"
+            cSettings: [
+                .headerSearchPath("External/SVGKit/privateHeaders")
+            ],
+            linkerSettings: [
+                .linkedLibrary("SVGKit")
+            ]
         )
     ]
 )
