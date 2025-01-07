@@ -18,11 +18,15 @@ let package = Package(
        ],
     targets: [
         .binaryTarget(
-            name: "ottu_checkout_sdk",
+            name: "dummy-ios-framework",
             path: "./Sources/ottu_checkout_sdk.xcframework"
         ),
         .target(
-            name: "dummy-ios-framework"
+            name: "dummy-ios-framework-wrapper",
+            dependencies: [
+                .product(name: "SWGKit", package: "SWGKit")
+            ],
+            path: "Sources"
         ),
     ]
 )
