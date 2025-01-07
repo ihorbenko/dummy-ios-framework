@@ -18,16 +18,8 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "ottu_checkout_sdk_binary",
-            path: "./Sources/ottu_checkout_sdk.xcframework"
-        ),
-        .target(
             name: "ottu_checkout_sdk",
-            dependencies: [
-                         "SVGKit",
-                         .product(name: "Sentry", package: "sentry-cocoa"),
-                         "ottu_checkout_sdk_binary"
-                     ]
+            path: "./Sources/ottu_checkout_sdk.xcframework"
         )
     ]
 )
