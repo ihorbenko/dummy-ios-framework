@@ -19,12 +19,10 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "ottu_checkout_sdk",
-            path: "./Sources/ottu_checkout_sdk.xcframework"),
+            path: "./Sources/ottu_checkout_sdk.xcframework"
+        ),
         .target(
-            name: "dummy-ios-framework",
-            dependencies: [
-                "SVGKit",
-            ]
+            name: "dummy-ios-framework"
         ),
     ]
 )
