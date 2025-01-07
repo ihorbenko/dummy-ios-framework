@@ -26,7 +26,10 @@ let package = Package(
             dependencies: [
                          "SVGKit",
                          .product(name: "Sentry", package: "sentry-cocoa")
-                     ]
+                     ],
+            linkerSettings: [
+                           .linkedLibrary("SVGKit")
+                       ]
         )
     ]
 )
