@@ -1,32 +1,20 @@
-// swift-tools-version: 5.7
-// The swift-tools-version declares the minimum version of Swift required to build this package.
-
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
-    name: "dummy-ios-framework",
+    name: "ottu_checkout_sdk",
     platforms: [
-          .iOS(.v13)
-      ],
+        .iOS(.v13)
+    ],
     products: [
         .library(
-            name: "dummy-ios-framework",
-            targets: ["dummy-ios-framework"]),
+            name: "ottu_checkout_sdk",
+            targets: ["ottu_checkout_sdk"]
+        ),
     ],
-    dependencies: [
-           .package(url: "https://github.com/SVGKit/SWGKit.git", from: "3.0.0"),
-       ],
     targets: [
         .binaryTarget(
-            name: "dummy-ios-framework",
-            path: "./Sources/ottu_checkout_sdk.xcframework"
-        ),
-        .target(
-            name: "dummy-ios-framework-wrapper",
-            dependencies: [
-                .product(name: "SWGKit", package: "SWGKit")
-            ],
-            path: "Sources"
-        ),
+            name: "ottu_checkout_sdk"
+        )
     ]
 )
