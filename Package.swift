@@ -3,36 +3,16 @@ import PackageDescription
 
 let package = Package(
     name: "ottu_checkout_sdk",
-    platforms: [
-        .iOS(.v13)
-    ],
+  
     products: [
-        .library(
-            name: "ottu_checkout_sdk",
-            targets: ["ottu_checkout_sdk_wrapper"]
-        ),
+            .library(name: "ottu_checkout_sdk", targets: ["ottu_checkout_sdk"])
     ],
-//    dependencies: [
-//        .package(url: "https://github.com/SVGKit/SVGKit.git", from: "3.0.0"),
-//    ],
+
+    dependencies: [
+            .package(url: "https://github.com/getsentry/sentry-cocoa-sdk-xcframeworks", from: "8.33.0"),
+    ],
+    
     targets: [
-        .target(
-            name: "ottu_checkout_sdk_wrapper",
-            dependencies: [
-                //"SVGKit",
-                "ottu_checkout_sdk"
-            ],
-            path: "./Sources",
-            /*swiftSettings: [
-                .define("SVGKIT_ENABLED") 
-            ],
-            linkerSettings: [
-                .linkedFramework("SVGKit")
-            ]*/
-        ),
-        .binaryTarget(
-            name: "ottu_checkout_sdk",
-            path: "./ottu_checkout_sdk.xcframework"
-        )
+             .binaryTarget(name: "ottu_checkout_sdk", path: "Sources/ottu_checkout_sdk.xcframework")
     ]
 )
