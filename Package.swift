@@ -1,4 +1,5 @@
-// swift-tools-version:5.4
+// swift-tools-version:5.5
+// The swift-tools-version declares the minimum version of Swift required to build this package.
 import PackageDescription
 
 let package = Package(
@@ -9,7 +10,7 @@ let package = Package(
     ],
 
     dependencies: [
-            .package(url: "https://github.com/getsentry/sentry-cocoa-sdk-xcframeworks", from: "8.33.0"),
+            .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0")
     ],
     
     targets: [
