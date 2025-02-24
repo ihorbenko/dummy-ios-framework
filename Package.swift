@@ -12,23 +12,23 @@ let package = Package(
             targets: ["ottu_checkout_sdk_wrapper"]
         ),
     ],
-    dependencies: [
-        .package(url: "https://github.com/SVGKit/SVGKit.git", from: "3.0.0"),
-    ],
+//    dependencies: [
+//        .package(url: "https://github.com/SVGKit/SVGKit.git", from: "3.0.0"),
+//    ],
     targets: [
         .target(
             name: "ottu_checkout_sdk_wrapper",
             dependencies: [
-                "SVGKit",
+                //"SVGKit",
                 "ottu_checkout_sdk"
             ],
             path: "./Sources",
-            swiftSettings: [
+            /*swiftSettings: [
                 .define("SVGKIT_ENABLED") 
             ],
             linkerSettings: [
                 .linkedFramework("SVGKit")
-            ]
+            ]*/
         ),
         .binaryTarget(
             name: "ottu_checkout_sdk",
