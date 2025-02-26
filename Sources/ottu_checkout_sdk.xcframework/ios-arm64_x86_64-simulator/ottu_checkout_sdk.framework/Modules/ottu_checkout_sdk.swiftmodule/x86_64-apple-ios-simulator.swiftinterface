@@ -1,7 +1,7 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
-// swift-module-flags: -target x86_64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ottu_checkout_sdk
-// swift-module-flags-ignorable: -no-verify-emitted-module-interface
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target x86_64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ottu_checkout_sdk
+// swift-module-flags-ignorable: -enable-bare-slash-regex
 import CommonCrypto
 import Darwin
 import DeveloperToolsSupport
@@ -19,7 +19,7 @@ import _StringProcessing
 import _SwiftConcurrencyShims
 @_exported import ottu_checkout_sdk
 extension UIKit.UIView {
-  @_Concurrency.MainActor @preconcurrency public var isShimmering: Swift.Bool {
+  @_Concurrency.MainActor(unsafe) public var isShimmering: Swift.Bool {
     get
     set
   }
@@ -303,7 +303,7 @@ public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: ottu_checkout_sdk.FormOfPayment, b: ottu_checkout_sdk.FormOfPayment) -> Swift.Bool
   public typealias AllCases = [ottu_checkout_sdk.FormOfPayment]
-  nonisolated public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
+  public static var allCases: [ottu_checkout_sdk.FormOfPayment] {
     get
   }
   public var hashValue: Swift.Int {
@@ -311,9 +311,11 @@ public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
   }
 }
 extension ottu_checkout_sdk.RemoteTransactionDetails {
+  #if compiler(>=5.3) && $EffectfulProp
   public var transactionDetails: ottu_checkout_sdk.TransactionDetails {
     get throws
   }
+  #endif
 }
 extension Foundation.Locale {
   public func languageDirectionFromLeftToRight() -> Swift.Bool
@@ -381,9 +383,11 @@ public class Disposable {
 public struct AmountsModel {
 }
 extension ottu_checkout_sdk.RemotePaymentService {
+  #if compiler(>=5.3) && $EffectfulProp
   public var applePay: ottu_checkout_sdk.ApplePayWallet? {
     get throws
   }
+  #endif
 }
 public protocol OttuDelegate {
   func errorCallback(_ data: [Swift.String : Any]?)
@@ -584,14 +588,18 @@ public struct RemoteCard : Swift.Decodable {
   public init(from decoder: any Swift.Decoder) throws
 }
 extension ottu_checkout_sdk.RemotePaymentMethod {
+  #if compiler(>=5.3) && $EffectfulProp
   public var paymentMethod: ottu_checkout_sdk.PaymentMethod {
     get throws
   }
+  #endif
 }
 extension ottu_checkout_sdk.RemoteResponse {
+  #if compiler(>=5.3) && $EffectfulProp
   public var response: ottu_checkout_sdk.TransactionDetailsResponse {
     get throws
   }
+  #endif
 }
 public struct RemotePaymentMethod : Swift.Decodable {
   public let code: Swift.String
@@ -706,7 +714,7 @@ public enum FailedCheck : Swift.CaseIterable {
   public static func == (a: ottu_checkout_sdk.FailedCheck, b: ottu_checkout_sdk.FailedCheck) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias AllCases = [ottu_checkout_sdk.FailedCheck]
-  nonisolated public static var allCases: [ottu_checkout_sdk.FailedCheck] {
+  public static var allCases: [ottu_checkout_sdk.FailedCheck] {
     get
   }
   public var hashValue: Swift.Int {
@@ -731,9 +739,11 @@ public typealias FileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [ott
   @objc deinit
 }
 extension ottu_checkout_sdk.RemoteFlexMethod {
+  #if compiler(>=5.3) && $EffectfulProp
   public var flexMethod: ottu_checkout_sdk.FlexMethod {
     get throws
   }
+  #endif
 }
 extension Foundation.HTTPURLResponse {
   public var isOK: Swift.Bool {
@@ -789,15 +799,17 @@ extension ottu_checkout_sdk.HTTPClient {
   @objc deinit
 }
 extension ottu_checkout_sdk.BottomSheetTransitioningDelegate : UIKit.UIViewControllerTransitioningDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc final public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor @preconcurrency @objc final public func animationController(forDismissed dismissed: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor @preconcurrency @objc final public func interactionControllerForDismissal(using animator: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
-  @_Concurrency.MainActor @preconcurrency @objc final public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
+  @_Concurrency.MainActor(unsafe) @objc final public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  @_Concurrency.MainActor(unsafe) @objc final public func animationController(forDismissed dismissed: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
+  @_Concurrency.MainActor(unsafe) @objc final public func interactionControllerForDismissal(using animator: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
+  @_Concurrency.MainActor(unsafe) @objc final public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
 }
 extension ottu_checkout_sdk.RemoteCard {
+  #if compiler(>=5.3) && $EffectfulProp
   public var card: ottu_checkout_sdk.Card {
     get throws
   }
+  #endif
 }
 public class CheckoutTheme {
   public var backgroundColor: UIKit.UIColor
