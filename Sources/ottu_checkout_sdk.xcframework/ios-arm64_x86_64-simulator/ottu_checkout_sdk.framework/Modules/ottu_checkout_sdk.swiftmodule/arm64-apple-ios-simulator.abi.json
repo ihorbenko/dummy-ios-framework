@@ -20092,16 +20092,6 @@
       },
       {
         "kind": "Import",
-        "name": "IOSSecuritySuite",
-        "printedName": "IOSSecuritySuite",
-        "declKind": "Import",
-        "moduleName": "ottu_checkout_sdk",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -26988,6 +26978,951 @@
       },
       {
         "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IOSSecuritySuite",
+        "printedName": "IOSSecuritySuite",
+        "children": [
+          {
+            "kind": "Function",
+            "name": "amIJailbroken",
+            "printedName": "amIJailbroken()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC13amIJailbrokenSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC13amIJailbrokenSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIJailbrokenWithFailMessage",
+            "printedName": "amIJailbrokenWithFailMessage()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(jailbroken: Swift.Bool, failMessage: Swift.String)",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC28amIJailbrokenWithFailMessageSb10jailbroken_SS04failJ0tyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC28amIJailbrokenWithFailMessageSb10jailbroken_SS04failJ0tyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIJailbrokenWithFailedChecks",
+            "printedName": "amIJailbrokenWithFailedChecks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(jailbroken: Swift.Bool, failedChecks: [(check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FailedCheck",
+                            "printedName": "ottu_checkout_sdk.FailedCheck",
+                            "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC29amIJailbrokenWithFailedChecksSb10jailbroken_SayAA0I5CheckO5check_SS11failMessagetG06failedJ0tyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC29amIJailbrokenWithFailedChecksSb10jailbroken_SayAA0I5CheckO5check_SS11failMessagetG06failedJ0tyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIRunInEmulator",
+            "printedName": "amIRunInEmulator()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC16amIRunInEmulatorSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC16amIRunInEmulatorSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIDebugged",
+            "printedName": "amIDebugged()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC11amIDebuggedSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC11amIDebuggedSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "denyDebugger",
+            "printedName": "denyDebugger()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC12denyDebuggeryyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC12denyDebuggeryyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "isParentPidUnexpected",
+            "printedName": "isParentPidUnexpected()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC21isParentPidUnexpectedSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC21isParentPidUnexpectedSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amITampered",
+            "printedName": "amITampered(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(result: Swift.Bool, hitChecks: [ottu_checkout_sdk.FileIntegrityCheck])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ottu_checkout_sdk.FileIntegrityCheck]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ottu_checkout_sdk.FileIntegrityCheck]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FileIntegrityCheck",
+                    "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                    "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC11amITamperedySb6result_SayAA18FileIntegrityCheckOG9hitCheckstAHFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC11amITamperedySb6result_SayAA18FileIntegrityCheckOG9hitCheckstAHFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIReverseEngineered",
+            "printedName": "amIReverseEngineered()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC20amIReverseEngineeredSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC20amIReverseEngineeredSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIReverseEngineeredWithFailedChecks",
+            "printedName": "amIReverseEngineeredWithFailedChecks()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Tuple",
+                "printedName": "(reverseEngineered: Swift.Bool, failedChecks: [(check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)])",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Bool",
+                    "printedName": "Swift.Bool",
+                    "usr": "s:Sb"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[(check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "FailedCheck",
+                            "printedName": "ottu_checkout_sdk.FailedCheck",
+                            "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC36amIReverseEngineeredWithFailedChecksSb07reverseH0_SayAA0J5CheckO5check_SS11failMessagetG06failedK0tyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC36amIReverseEngineeredWithFailedChecksSb07reverseH0_SayAA0J5CheckO5check_SS11failMessagetG06failedK0tyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIRuntimeHooked",
+            "printedName": "amIRuntimeHooked(dyldWhiteList:detectionClass:selector:isClassMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any AnyObject.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC16amIRuntimeHooked13dyldWhiteList14detectionClass8selector02isM6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC16amIRuntimeHooked13dyldWhiteList14detectionClass8selector02isM6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "deprecated": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIRuntimeHooked",
+            "printedName": "amIRuntimeHooked(dyldAllowList:detectionClass:selector:isClassMethod:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sa"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "ExistentialMetatype",
+                "printedName": "any AnyObject.Type",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "ProtocolComposition",
+                    "printedName": "AnyObject"
+                  }
+                ]
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Selector",
+                "printedName": "ObjectiveC.Selector",
+                "usr": "s:10ObjectiveC8SelectorV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC16amIRuntimeHooked13dyldAllowList14detectionClass8selector02isM6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC16amIRuntimeHooked13dyldAllowList14detectionClass8selector02isM6MethodSbSaySSG_yXlXp10ObjectiveC8SelectorVSbtFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIProxied",
+            "printedName": "amIProxied()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC10amIProxiedSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC10amIProxiedSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIInLockdownMode",
+            "printedName": "amIInLockdownMode()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC17amIInLockdownModeSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC17amIInLockdownModeSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "intro_iOS": "16",
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "Available",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "amIMSHooked",
+            "printedName": "amIMSHooked(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafeMutableRawPointer",
+                "printedName": "Swift.UnsafeMutableRawPointer",
+                "usr": "s:Sv"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC11amIMSHookedySbSvFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC11amIMSHookedySbSvFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "denyMSHook",
+            "printedName": "denyMSHook(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UnsafeMutableRawPointer?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UnsafeMutableRawPointer",
+                    "printedName": "Swift.UnsafeMutableRawPointer",
+                    "usr": "s:Sv"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafeMutableRawPointer",
+                "printedName": "Swift.UnsafeMutableRawPointer",
+                "usr": "s:Sv"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC10denyMSHookySvSgSvFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC10denyMSHookySvSgSvFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "denySymbolHook",
+            "printedName": "denySymbolHook(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC14denySymbolHookyySSFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC14denySymbolHookyySSFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "denySymbolHook",
+            "printedName": "denySymbolHook(_:at:imageSlide:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafePointer",
+                "printedName": "Swift.UnsafePointer<MachO.mach_header>",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "mach_header",
+                    "printedName": "MachO.mach_header",
+                    "usr": "c:@S@mach_header"
+                  }
+                ],
+                "usr": "s:SP"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC14denySymbolHook_2at10imageSlideySS_SPySo11mach_headerVGSitFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC14denySymbolHook_2at10imageSlideySS_SPySo11mach_headerVGSitFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getMachOFileHashValue",
+            "printedName": "getMachOFileHashValue(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IntegrityCheckerImageTarget",
+                "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                "hasDefaultArg": true,
+                "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC21getMachOFileHashValueySSSgAA27IntegrityCheckerImageTargetOFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC21getMachOFileHashValueySSSgAA27IntegrityCheckerImageTargetOFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "findLoadedDylibs",
+            "printedName": "findLoadedDylibs(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "[Swift.String]?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "IntegrityCheckerImageTarget",
+                "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                "hasDefaultArg": true,
+                "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC16findLoadedDylibsySaySSGSgAA27IntegrityCheckerImageTargetOFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC16findLoadedDylibsySaySSGSgAA27IntegrityCheckerImageTargetOFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasBreakpointAt",
+            "printedName": "hasBreakpointAt(_:functionSize:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UnsafeRawPointer",
+                "printedName": "Swift.UnsafeRawPointer",
+                "usr": "s:SV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.UInt?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt",
+                    "printedName": "Swift.UInt",
+                    "usr": "s:Su"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC15hasBreakpointAt_12functionSizeSbSV_SuSgtFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC15hasBreakpointAt_12functionSizeSbSV_SuSgtFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "hasWatchpoint",
+            "printedName": "hasWatchpoint()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC13hasWatchpointSbyFZ",
+            "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC13hasWatchpointSbyFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "RawDocComment"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:17ottu_checkout_sdk16IOSSecuritySuiteC",
+        "mangledName": "$s17ottu_checkout_sdk16IOSSecuritySuiteC",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "Available",
+          "RawDocComment"
+        ],
+        "hasMissingDesignatedInitializers": true,
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Darwin",
+        "printedName": "Darwin",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "ObjectiveC",
+        "printedName": "ObjectiveC",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "MachO",
         "printedName": "MachO",
         "declKind": "Import",
@@ -27040,6 +27975,1360 @@
           "Inline"
         ],
         "funcSelfKind": "NonMutating"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FailedCheck",
+        "printedName": "FailedCheck",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "urlSchemes",
+            "printedName": "urlSchemes",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO10urlSchemesyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO10urlSchemesyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "existenceOfSuspiciousFiles",
+            "printedName": "existenceOfSuspiciousFiles",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO26existenceOfSuspiciousFilesyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO26existenceOfSuspiciousFilesyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "suspiciousFilesCanBeOpened",
+            "printedName": "suspiciousFilesCanBeOpened",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO26suspiciousFilesCanBeOpenedyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO26suspiciousFilesCanBeOpenedyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "restrictedDirectoriesWriteable",
+            "printedName": "restrictedDirectoriesWriteable",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO30restrictedDirectoriesWriteableyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO30restrictedDirectoriesWriteableyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "fork",
+            "printedName": "fork",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO4forkyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO4forkyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "symbolicLinks",
+            "printedName": "symbolicLinks",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO13symbolicLinksyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO13symbolicLinksyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "dyld",
+            "printedName": "dyld",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO4dyldyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO4dyldyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "openedPorts",
+            "printedName": "openedPorts",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO11openedPortsyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO11openedPortsyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "pSelectFlag",
+            "printedName": "pSelectFlag",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO11pSelectFlagyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO11pSelectFlagyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Var",
+            "name": "suspiciousObjCClasses",
+            "printedName": "suspiciousObjCClasses",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FailedCheck.Type) -> ottu_checkout_sdk.FailedCheck",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FailedCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO21suspiciousObjCClassesyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO21suspiciousObjCClassesyA2CmF",
+            "moduleName": "ottu_checkout_sdk"
+          },
+          {
+            "kind": "Function",
+            "name": "==",
+            "printedName": "==(_:_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FailedCheck",
+                "printedName": "ottu_checkout_sdk.FailedCheck",
+                "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "FailedCheck",
+                "printedName": "ottu_checkout_sdk.FailedCheck",
+                "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO2eeoiySbAC_ACtFZ",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO2eeoiySbAC_ACtFZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "hashValue",
+            "printedName": "hashValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO9hashValueSivp",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO9hashValueSivp",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk11FailedCheckO9hashValueSivg",
+                "mangledName": "$s17ottu_checkout_sdk11FailedCheckO9hashValueSivg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO4hash4intoys6HasherVz_tF",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO4hash4intoys6HasherVz_tF",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Var",
+            "name": "allCases",
+            "printedName": "allCases",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Array",
+                "printedName": "[ottu_checkout_sdk.FailedCheck]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FailedCheck",
+                    "printedName": "ottu_checkout_sdk.FailedCheck",
+                    "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                  }
+                ],
+                "usr": "s:Sa"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk11FailedCheckO8allCasesSayACGvpZ",
+            "mangledName": "$s17ottu_checkout_sdk11FailedCheckO8allCasesSayACGvpZ",
+            "moduleName": "ottu_checkout_sdk",
+            "static": true,
+            "implicit": true,
+            "declAttributes": [
+              "Nonisolated"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ottu_checkout_sdk.FailedCheck]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk11FailedCheckO8allCasesSayACGvgZ",
+                "mangledName": "$s17ottu_checkout_sdk11FailedCheckO8allCasesSayACGvgZ",
+                "moduleName": "ottu_checkout_sdk",
+                "static": true,
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17ottu_checkout_sdk11FailedCheckO",
+        "mangledName": "$s17ottu_checkout_sdk11FailedCheckO",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "CaseIterable",
+            "printedName": "CaseIterable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "AllCases",
+                "printedName": "AllCases",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Array",
+                    "printedName": "[ottu_checkout_sdk.FailedCheck]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FailedCheck",
+                        "printedName": "ottu_checkout_sdk.FailedCheck",
+                        "usr": "s:17ottu_checkout_sdk11FailedCheckO"
+                      }
+                    ],
+                    "usr": "s:Sa"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:s12CaseIterableP",
+            "mangledName": "$ss12CaseIterableP"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "DyldChainedImportFormat",
+        "printedName": "DyldChainedImportFormat",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "general",
+            "printedName": "general",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.DyldChainedImportFormat.Type) -> ottu_checkout_sdk.DyldChainedImportFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DyldChainedImportFormat",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                    "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DyldChainedImportFormat",
+                        "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                        "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO7generalyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO7generalyA2CmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addend",
+            "printedName": "addend",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.DyldChainedImportFormat.Type) -> ottu_checkout_sdk.DyldChainedImportFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DyldChainedImportFormat",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                    "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DyldChainedImportFormat",
+                        "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                        "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO6addendyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO6addendyA2CmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "addend64",
+            "printedName": "addend64",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.DyldChainedImportFormat.Type) -> ottu_checkout_sdk.DyldChainedImportFormat",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DyldChainedImportFormat",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                    "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DyldChainedImportFormat",
+                        "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                        "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO8addend64yA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO8addend64yA2CmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(rawValue:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ottu_checkout_sdk.DyldChainedImportFormat?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "DyldChainedImportFormat",
+                    "printedName": "ottu_checkout_sdk.DyldChainedImportFormat",
+                    "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "UInt32",
+                "printedName": "Swift.UInt32",
+                "usr": "s:s6UInt32V"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO8rawValueACSgs6UInt32V_tcfc",
+            "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO8rawValueACSgs6UInt32V_tcfc",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Var",
+            "name": "rawValue",
+            "printedName": "rawValue",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "UInt32",
+                "printedName": "Swift.UInt32",
+                "usr": "s:s6UInt32V"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO8rawValues6UInt32Vvp",
+            "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO8rawValues6UInt32Vvp",
+            "moduleName": "ottu_checkout_sdk",
+            "implicit": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO8rawValues6UInt32Vvg",
+                "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO8rawValues6UInt32Vvg",
+                "moduleName": "ottu_checkout_sdk",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17ottu_checkout_sdk23DyldChainedImportFormatO",
+        "mangledName": "$s17ottu_checkout_sdk23DyldChainedImportFormatO",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl"
+        ],
+        "enumRawTypeName": "UInt32",
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Equatable",
+            "printedName": "Equatable",
+            "usr": "s:SQ",
+            "mangledName": "$sSQ"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Hashable",
+            "printedName": "Hashable",
+            "usr": "s:SH",
+            "mangledName": "$sSH"
+          },
+          {
+            "kind": "Conformance",
+            "name": "RawRepresentable",
+            "printedName": "RawRepresentable",
+            "children": [
+              {
+                "kind": "TypeWitness",
+                "name": "RawValue",
+                "printedName": "RawValue",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UInt32",
+                    "printedName": "Swift.UInt32",
+                    "usr": "s:s6UInt32V"
+                  }
+                ]
+              }
+            ],
+            "usr": "s:SY",
+            "mangledName": "$sSY"
+          }
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "MachO",
+        "printedName": "MachO",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "Import",
+        "name": "CommonCrypto",
+        "printedName": "CommonCrypto",
+        "declKind": "Import",
+        "moduleName": "ottu_checkout_sdk"
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "FileIntegrityCheck",
+        "printedName": "FileIntegrityCheck",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "bundleID",
+            "printedName": "bundleID",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FileIntegrityCheck.Type) -> (Swift.String) -> ottu_checkout_sdk.FileIntegrityCheck",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ottu_checkout_sdk.FileIntegrityCheck",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FileIntegrityCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO8bundleIDyACSScACmF",
+            "mangledName": "$s17ottu_checkout_sdk18FileIntegrityCheckO8bundleIDyACSScACmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "mobileProvision",
+            "printedName": "mobileProvision",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FileIntegrityCheck.Type) -> (Swift.String) -> ottu_checkout_sdk.FileIntegrityCheck",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ottu_checkout_sdk.FileIntegrityCheck",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FileIntegrityCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO15mobileProvisionyACSScACmF",
+            "mangledName": "$s17ottu_checkout_sdk18FileIntegrityCheckO15mobileProvisionyACSScACmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "machO",
+            "printedName": "machO",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.FileIntegrityCheck.Type) -> (Swift.String, Swift.String) -> ottu_checkout_sdk.FileIntegrityCheck",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String, Swift.String) -> ottu_checkout_sdk.FileIntegrityCheck",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Tuple",
+                        "printedName": "(Swift.String, Swift.String)",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.FileIntegrityCheck.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FileIntegrityCheck",
+                        "printedName": "ottu_checkout_sdk.FileIntegrityCheck",
+                        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO5machOyACSS_SStcACmF",
+            "mangledName": "$s17ottu_checkout_sdk18FileIntegrityCheckO5machOyACSS_SStcACmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "description",
+            "printedName": "description",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO11descriptionSSvp",
+            "mangledName": "$s17ottu_checkout_sdk18FileIntegrityCheckO11descriptionSSvp",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO11descriptionSSvg",
+                "mangledName": "$s17ottu_checkout_sdk18FileIntegrityCheckO11descriptionSSvg",
+                "moduleName": "ottu_checkout_sdk",
+                "isFromExtension": true,
+                "accessorKind": "get"
+              }
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17ottu_checkout_sdk18FileIntegrityCheckO",
+        "mangledName": "$s17ottu_checkout_sdk18FileIntegrityCheckO",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "IntegrityCheckerImageTarget",
+        "printedName": "IntegrityCheckerImageTarget",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "default",
+            "printedName": "default",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.IntegrityCheckerImageTarget.Type) -> ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "IntegrityCheckerImageTarget",
+                    "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                    "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IntegrityCheckerImageTarget",
+                        "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                        "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO7defaultyA2CmF",
+            "mangledName": "$s17ottu_checkout_sdk27IntegrityCheckerImageTargetO7defaultyA2CmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "custom",
+            "printedName": "custom",
+            "children": [
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(ottu_checkout_sdk.IntegrityCheckerImageTarget.Type) -> (Swift.String) -> ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(Swift.String) -> ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IntegrityCheckerImageTarget",
+                        "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                        "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ]
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Metatype",
+                    "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget.Type",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "IntegrityCheckerImageTarget",
+                        "printedName": "ottu_checkout_sdk.IntegrityCheckerImageTarget",
+                        "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "declKind": "EnumElement",
+            "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO6customyACSScACmF",
+            "mangledName": "$s17ottu_checkout_sdk27IntegrityCheckerImageTargetO6customyACSScACmF",
+            "moduleName": "ottu_checkout_sdk",
+            "declAttributes": [
+              "RawDocComment"
+            ]
+          }
+        ],
+        "declKind": "Enum",
+        "usr": "s:17ottu_checkout_sdk27IntegrityCheckerImageTargetO",
+        "mangledName": "$s17ottu_checkout_sdk27IntegrityCheckerImageTargetO",
+        "moduleName": "ottu_checkout_sdk",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          }
+        ]
       },
       {
         "kind": "Import",
@@ -33477,133 +35766,133 @@
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "BooleanLiteral",
-      "offset": 973,
+      "offset": 948,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1417,
+      "offset": 1392,
       "length": 538,
       "value": "\"Am I MSHooked? \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1487,
+      "offset": 1462,
       "length": 11,
       "value": "\"\nApplication executable file hash value? \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1584,
+      "offset": 1559,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1587,
+      "offset": 1562,
       "length": 16,
       "value": "\"\nIOSSecuritySuite executable file hash value? \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1703,
+      "offset": 1678,
       "length": 18,
       "value": "\"IOSSecuritySuite\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1727,
+      "offset": 1702,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1741,
+      "offset": 1716,
       "length": 6,
       "value": "\"\nLoaded libs? \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "Array",
-      "offset": 1806,
+      "offset": 1781,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1809,
+      "offset": 1784,
       "length": 13,
       "value": "\"\nHasBreakpoint? \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1899,
+      "offset": 1874,
       "length": 10,
       "value": "\"\nWatchpoint? \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 1941,
+      "offset": 1916,
       "length": 1116,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 2375,
+      "offset": 2350,
       "length": 3,
       "value": "\" \""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 2401,
+      "offset": 2376,
       "length": 4,
       "value": "\"\n\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 2427,
+      "offset": 2402,
       "length": 23,
       "value": "\"print has been hooked\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 2715,
+      "offset": 2690,
       "length": 44,
       "value": "\"$ss5print_9separator10terminatoryypd_S2StF\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 2867,
+      "offset": 2842,
       "length": 26,
       "value": "\"print hasn't been hooked\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 2964,
+      "offset": 2939,
       "length": 44,
       "value": "\"$ss5print_9separator10terminatoryypd_S2StF\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/JBCkeck.swift",
       "kind": "StringLiteral",
-      "offset": 3024,
+      "offset": 2999,
       "length": 27,
       "value": "\"print has been antiHooked\""
     },
@@ -33678,6 +35967,174 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 831,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 878,
+      "length": 8,
+      "value": "\"ptrace\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1087,
+      "length": 2,
+      "value": "31"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1091,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1094,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1097,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1125,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 1141,
+      "length": 75,
+      "value": "\"Error occured when calling ptrace(). Denying debugger may not be reliable\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1497,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1619,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1821,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2040,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2158,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2284,
+      "length": 10,
+      "value": "0xe7ffdefe"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2329,
+      "length": 10,
+      "value": "0xd4200000"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2420,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2597,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2614,
+      "length": 1,
+      "value": "4"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2860,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/DebuggerChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2905,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 9975,
+      "length": 2,
+      "value": "-2"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 10018,
+      "length": 6,
+      "value": "\"fork\""
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10189,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/JailbreakChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 10215,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/JBChecker\/FishHook.swift",
       "kind": "IntegerLiteral",
       "offset": 4734,
@@ -33704,6 +36161,76 @@
       "offset": 5456,
       "length": 1,
       "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4481,
+      "length": 3,
+      "value": "102"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 29837,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 30040,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 30308,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 30592,
+      "length": 1,
+      "value": "0"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 31663,
+      "length": 1,
+      "value": "1"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 31705,
+      "length": 6,
+      "value": "2"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/FishHookChecker.swift",
+      "kind": "IntegerLiteral",
+      "offset": 31754,
+      "length": 8,
+      "value": "3"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/ProxyChecker.swift",
+      "kind": "BooleanLiteral",
+      "offset": 266,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/IOSSecuritySuite\/RuntimeHookChecker.swift",
+      "kind": "StringLiteral",
+      "offset": 318,
+      "length": 8,
+      "value": "\"dladdr\""
     },
     {
       "filePath": "\/Users\/admin\/sources\/ottu\/ottu-ios-checkout\/ottu_checkout_sdk\/Ottu API\/HTTPClient.swift",
