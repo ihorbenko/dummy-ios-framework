@@ -2,10 +2,12 @@
 // swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
 // swift-module-flags: -target arm64-apple-ios15-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name ottu_checkout_sdk
 // swift-module-flags-ignorable: -no-verify-emitted-module-interface
+import CommonCrypto
+import Darwin
 import DeveloperToolsSupport
 import Foundation
-import IOSSecuritySuite
 import MachO
+import ObjectiveC
 import PassKit
 import Sentry
 import Swift
@@ -669,7 +671,85 @@ public struct RemoteTransactionDetails : Swift.Decodable {
   public let session_id: Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
+@_hasMissingDesignatedInitializers @available(iOSApplicationExtension, unavailable)
+public class IOSSecuritySuite {
+  public static func amIJailbroken() -> Swift.Bool
+  public static func amIJailbrokenWithFailMessage() -> (jailbroken: Swift.Bool, failMessage: Swift.String)
+  public static func amIJailbrokenWithFailedChecks() -> (jailbroken: Swift.Bool, failedChecks: [ottu_checkout_sdk.FailedCheckType])
+  public static func amIRunInEmulator() -> Swift.Bool
+  public static func amIDebugged() -> Swift.Bool
+  public static func denyDebugger()
+  public static func isParentPidUnexpected() -> Swift.Bool
+  public static func amITampered(_ checks: [ottu_checkout_sdk.FileIntegrityCheck]) -> ottu_checkout_sdk.FileIntegrityCheckResult
+  public static func amIReverseEngineered() -> Swift.Bool
+  public static func amIReverseEngineeredWithFailedChecks() -> (reverseEngineered: Swift.Bool, failedChecks: [ottu_checkout_sdk.FailedCheckType])
+  @available(*, deprecated, renamed: "amIRuntimeHooked(dyldAllowList:detectionClass:selector:isClassMethod:)")
+  public static func amIRuntimeHooked(dyldWhiteList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIRuntimeHooked(dyldAllowList: [Swift.String], detectionClass: Swift.AnyClass, selector: ObjectiveC.Selector, isClassMethod: Swift.Bool) -> Swift.Bool
+  public static func amIProxied() -> Swift.Bool
+  @available(iOS 16, *)
+  public static func amIInLockdownMode() -> Swift.Bool
+  @objc deinit
+}
+@available(iOSApplicationExtension, unavailable)
+extension ottu_checkout_sdk.IOSSecuritySuite {
+  public static func amIMSHooked(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.Bool
+  public static func denyMSHook(_ functionAddress: Swift.UnsafeMutableRawPointer) -> Swift.UnsafeMutableRawPointer?
+  public static func denySymbolHook(_ symbol: Swift.String)
+  public static func denySymbolHook(_ symbol: Swift.String, at image: Swift.UnsafePointer<MachO.mach_header>, imageSlide slide: Swift.Int)
+  public static func getMachOFileHashValue(_ target: ottu_checkout_sdk.IntegrityCheckerImageTarget = .default) -> Swift.String?
+  public static func findLoadedDylibs(_ target: ottu_checkout_sdk.IntegrityCheckerImageTarget = .default) -> [Swift.String]?
+  public static func hasBreakpointAt(_ functionAddr: Swift.UnsafeRawPointer, functionSize: Darwin.vm_size_t?) -> Swift.Bool
+  public static func hasWatchpoint() -> Swift.Bool
+}
 @inline(__always) public func replaceSymbol(_ symbol: Swift.String, newMethod: Swift.UnsafeMutableRawPointer, oldMethod: inout Swift.UnsafeMutableRawPointer?)
+public typealias FailedCheckType = (check: ottu_checkout_sdk.FailedCheck, failMessage: Swift.String)
+public enum FailedCheck : Swift.CaseIterable {
+  case urlSchemes
+  case existenceOfSuspiciousFiles
+  case suspiciousFilesCanBeOpened
+  case restrictedDirectoriesWriteable
+  case fork
+  case symbolicLinks
+  case dyld
+  case openedPorts
+  case pSelectFlag
+  case suspiciousObjCClasses
+  public static func == (a: ottu_checkout_sdk.FailedCheck, b: ottu_checkout_sdk.FailedCheck) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias AllCases = [ottu_checkout_sdk.FailedCheck]
+  nonisolated public static var allCases: [ottu_checkout_sdk.FailedCheck] {
+    get
+  }
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum DyldChainedImportFormat : Swift.UInt32 {
+  case general
+  case addend
+  case addend64
+  public init?(rawValue: Swift.UInt32)
+  public typealias RawValue = Swift.UInt32
+  public var rawValue: Swift.UInt32 {
+    get
+  }
+}
+public enum FileIntegrityCheck {
+  case bundleID(Swift.String)
+  case mobileProvision(Swift.String)
+  case machO(Swift.String, Swift.String)
+}
+extension ottu_checkout_sdk.FileIntegrityCheck {
+  public var description: Swift.String {
+    get
+  }
+}
+public typealias FileIntegrityCheckResult = (result: Swift.Bool, hitChecks: [ottu_checkout_sdk.FileIntegrityCheck])
+public enum IntegrityCheckerImageTarget {
+  case `default`
+  case custom(Swift.String)
+}
 @_hasMissingDesignatedInitializers final public class TokenPaySubmitterMapper {
   public struct Response : Swift.Decodable {
     public init(from decoder: any Swift.Decoder) throws
@@ -801,6 +881,11 @@ extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Hashable {}
 extension ottu_checkout_sdk.PaymentMethodFlow : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand : Swift.Equatable {}
 extension ottu_checkout_sdk.PayButtonViewModel.PayButtonType.Brand : Swift.Hashable {}
+extension ottu_checkout_sdk.FailedCheck : Swift.Equatable {}
+extension ottu_checkout_sdk.FailedCheck : Swift.Hashable {}
+extension ottu_checkout_sdk.DyldChainedImportFormat : Swift.Equatable {}
+extension ottu_checkout_sdk.DyldChainedImportFormat : Swift.Hashable {}
+extension ottu_checkout_sdk.DyldChainedImportFormat : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.HTTPMethod : Swift.Equatable {}
 extension ottu_checkout_sdk.HTTPMethod : Swift.Hashable {}
 extension ottu_checkout_sdk.HTTPMethod : Swift.RawRepresentable {}
