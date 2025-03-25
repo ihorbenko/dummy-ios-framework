@@ -13,7 +13,8 @@ let package = Package(
         )
     ],
     dependencies: [
-        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0")
+        .package(url: "https://github.com/getsentry/sentry-cocoa", from: "8.33.0"),
+	.package(url: "https://github.com/scenee/FloatingPanel", from: "2.8.6")
     ],
     targets: [
         .binaryTarget(
@@ -23,7 +24,8 @@ let package = Package(
         .target(
             name: "ottu_checkout_sdk_dep",
             dependencies: [
-                         .product(name: "Sentry", package: "sentry-cocoa")
+                         .product(name: "Sentry", package: "sentry-cocoa"),
+			 .product(name: "FloatingPanel", package: "FloatingPanel")
                      ]
         )
     ]

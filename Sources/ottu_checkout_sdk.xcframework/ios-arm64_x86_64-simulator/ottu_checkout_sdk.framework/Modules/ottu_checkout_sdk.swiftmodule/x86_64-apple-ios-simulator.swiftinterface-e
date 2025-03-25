@@ -5,6 +5,7 @@
 import CommonCrypto
 import Darwin
 import DeveloperToolsSupport
+import FloatingPanel
 import Foundation
 import MachO
 import ObjectiveC
@@ -298,7 +299,6 @@ public enum FormOfPayment : Swift.Equatable, Swift.CaseIterable {
   case stcPay
   case tokenPay
   case redirect
-  case flex
   case cardOnsite
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: ottu_checkout_sdk.FormOfPayment, b: ottu_checkout_sdk.FormOfPayment) -> Swift.Bool
@@ -407,30 +407,6 @@ final public class Checkout {
   final public func paymentViewController() -> UIKit.UIViewController?
   @objc deinit
 }
-public enum BottomSheetDetent {
-  case medium
-  case large
-  public static func == (a: ottu_checkout_sdk.BottomSheetDetent, b: ottu_checkout_sdk.BottomSheetDetent) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct BottomSheetConfiguration {
-  public let showPullBar: Swift.Bool
-  public let tapToDismissEnabled: Swift.Bool
-  public let panToDismissEnaled: Swift.Bool
-  public let cornerRadius: CoreFoundation.CGFloat
-  public let overlayColor: UIKit.UIColor
-  public let initDetent: ottu_checkout_sdk.BottomSheetDetent
-  public let detents: [ottu_checkout_sdk.BottomSheetDetent]
-  public let animationDuration: Foundation.TimeInterval
-  public let dampingRatio: Swift.Double
-  public let dismissThreshold: CoreFoundation.CGFloat
-  public init(showPullBar: Swift.Bool, tapToDismissEnabled: Swift.Bool, panToDismissEnaled: Swift.Bool, cornerRadius: CoreFoundation.CGFloat, overlayColor: UIKit.UIColor, animationDuration: Foundation.TimeInterval, dampingRatio: Swift.Double, dismissThreshold: CoreFoundation.CGFloat, initDetent: ottu_checkout_sdk.BottomSheetDetent, detents: [ottu_checkout_sdk.BottomSheetDetent])
-  public static let `default`: ottu_checkout_sdk.BottomSheetConfiguration
-  public static let fixed: ottu_checkout_sdk.BottomSheetConfiguration
-}
 public struct OTPErrorViewModel {
   public let errorMessage: Swift.String
 }
@@ -507,7 +483,6 @@ public struct PhoneNumberViewModel {
   public let phoneNumberTitle: Swift.String
   public let phoneNumberValue: Swift.String?
   public let sendOTPButtonTitle: Swift.String
-  public let isPossibleSaveCard: Swift.Bool
   public let isShowSaveCard: Swift.Bool
 }
 public struct SelectPaymentMethodViewModel<Image> {
@@ -784,16 +759,6 @@ extension ottu_checkout_sdk.HTTPClient {
   @discardableResult
   public func request(method: ottu_checkout_sdk.HTTPMethod, with url: Foundation.URL, headers: [Swift.String : Swift.String]?, completion: @escaping (Self.Result) -> Swift.Void) -> any ottu_checkout_sdk.HTTPClientTask
 }
-@objc final public class BottomSheetTransitioningDelegate : ObjectiveC.NSObject {
-  public init(configuration: ottu_checkout_sdk.BottomSheetConfiguration)
-  @objc deinit
-}
-extension ottu_checkout_sdk.BottomSheetTransitioningDelegate : UIKit.UIViewControllerTransitioningDelegate {
-  @_Concurrency.MainActor @preconcurrency @objc final public func animationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController, source: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor @preconcurrency @objc final public func animationController(forDismissed dismissed: UIKit.UIViewController) -> (any UIKit.UIViewControllerAnimatedTransitioning)?
-  @_Concurrency.MainActor @preconcurrency @objc final public func interactionControllerForDismissal(using animator: any UIKit.UIViewControllerAnimatedTransitioning) -> (any UIKit.UIViewControllerInteractiveTransitioning)?
-  @_Concurrency.MainActor @preconcurrency @objc final public func presentationController(forPresented presented: UIKit.UIViewController, presenting: UIKit.UIViewController?, source: UIKit.UIViewController) -> UIKit.UIPresentationController?
-}
 extension ottu_checkout_sdk.RemoteCard {
   public var card: ottu_checkout_sdk.Card {
     get throws
@@ -848,8 +813,6 @@ extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.Equatab
 extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.Hashable {}
 extension ottu_checkout_sdk.TransactionDetailsResponse.Operation : Swift.RawRepresentable {}
 extension ottu_checkout_sdk.FormOfPayment : Swift.Hashable {}
-extension ottu_checkout_sdk.BottomSheetDetent : Swift.Equatable {}
-extension ottu_checkout_sdk.BottomSheetDetent : Swift.Hashable {}
 extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Equatable {}
 extension ottu_checkout_sdk.PaymentMethodFlow : Swift.Hashable {}
 extension ottu_checkout_sdk.PaymentMethodFlow : Swift.RawRepresentable {}

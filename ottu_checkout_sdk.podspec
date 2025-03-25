@@ -2,7 +2,7 @@
 
 Pod::Spec.new do |s|
     s.name         = "ottu_checkout_sdk"
-    s.version      = "2.0.3"
+    s.version      = "2.0.4"
     s.summary      = "The ottu_checkout_sdk iOS SDK makes it quick and easy to build an excellent payment experience in your iOS app."
     s.description  = <<-DESC
 **Simplified security**: We make it simple for you to collect sensitive data such as credit card numbers and remain PCI compliant.
@@ -18,6 +18,7 @@ Pod::Spec.new do |s|
     s.source = { :git => "https://github.com/ihorbenko/dummy-ios-framework.git", :tag => "#{s.version}" }
     s.vendored_frameworks = "Sources/ottu_checkout_sdk.xcframework"
     s.dependency 'Sentry', '~> 8.33.0'
+    s.dependency 'FloatingPanel', '~> 2.8.6'
 
     s.platform = :ios
     s.swift_version = "5.0"
